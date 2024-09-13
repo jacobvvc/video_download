@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>视频下载器</title>
+</head>
+<body>
+    <h1>输入视频链接下载</h1>
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" name="video_url" placeholder="输入视频链接">
+        <button type="submit">下载视频</button>
+        <button onclick="window.location='/download/'">保存本地</button>
+    </form>
+    <p>{{ download_message }}</p>
+</body>
+</html>
